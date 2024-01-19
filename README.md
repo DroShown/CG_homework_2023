@@ -1,6 +1,8 @@
 # CG_homework_2023
 My implementation of 2023 SJTU Computer Graphics homework.
 ## 关于计算机图形学作业
+### 构建方法
+在./homework_project文件夹中用Cmakelist构建项目，target homework*就是对应作业的target
 ### 作业1
 绘制几个三角形，颜色各不相同，随时间变化且在同一色系，主要用途是上手OpenGL，熟悉渲染管线和渲染流程。
 ### 作业2

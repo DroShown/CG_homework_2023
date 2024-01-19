@@ -1,5 +1,5 @@
 # CG_homework_2023
-My implementation of computer graphics homework.
+My implementation of 2023 SJTU Computer Graphics homework.
 ## 关于计算机图形学作业
 ### 作业1
 绘制几个三角形，颜色各不相同，随时间变化且在同一色系，主要用途是上手OpenGL，熟悉渲染管线和渲染流程。

@@ -62,6 +62,8 @@ else()
 endif(WIN32)
 
 set(GUEST_ARTICLES
+        homework1
+        homework2
     homework3
 )
 
@@ -92,6 +94,8 @@ function(create_project_from_sources chapter demo)
             "src/${chapter}/${demo}/*/*.vs"
             "src/${chapter}/${demo}/*/*.fs"
             "src/${chapter}/${demo}/*/*.gs"
+            "src/${chapter}/${demo}/*/*.h"
+            "src/${chapter}/${demo}/*/*.cpp"
     )
 	if (demo STREQUAL "")
 		SET(replaced "")

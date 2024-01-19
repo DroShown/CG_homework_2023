@@ -1,4 +1,5 @@
 # ignores following folders
 bin/
 build/
+cmake-build-debug/
 out/

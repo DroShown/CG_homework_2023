@@ -1,0 +1,5 @@
+/Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake-build-debug/CMakeFiles/STB_IMAGE.dir
+/Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake-build-debug/CMakeFiles/GLAD.dir
+/Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake-build-debug/CMakeFiles/homework3.dir
+/Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake-build-debug/CMakeFiles/rebuild_cache.dir

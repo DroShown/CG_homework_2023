@@ -1,0 +1,7 @@
+# ninja log v5
+0	231	1704737713373119476	CMakeFiles/GLAD.dir/src/glad.c.o	d1e4ce7453262efc
+231	333	1704737713478865000	libGLAD.a	e56396e8785607f5
+0	591	1704737713717432362	CMakeFiles/STB_IMAGE.dir/src/stb_image.cpp.o	9c7d241ecf48d17b
+592	636	1704737713781526000	libSTB_IMAGE.a	e9b6ed8b28f9b247
+5	1755	1704738603048902225	CMakeFiles/homework3.dir/src/homework3/main.cpp.o	ea013fd35791a94a
+1755	2028	1704738603272897910	/Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/bin/homework3/homework3	93a14681578b9d02

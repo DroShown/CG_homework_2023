@@ -1,0 +1,219 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: LearnOpenGL
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake-build-debug/
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target STB_IMAGE
+
+
+#############################################
+# Order-only phony target for STB_IMAGE
+
+build cmake_object_order_depends_target_STB_IMAGE: phony || CMakeFiles/STB_IMAGE.dir
+
+build CMakeFiles/STB_IMAGE.dir/src/stb_image.cpp.o: CXX_COMPILER__STB_IMAGE_Debug /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/src/stb_image.cpp || cmake_object_order_depends_target_STB_IMAGE
+  DEP_FILE = CMakeFiles/STB_IMAGE.dir/src/stb_image.cpp.o.d
+  FLAGS = -std=c++17 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/System/Library/Frameworks -I/Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake-build-debug/configuration -I/Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/includes
+  OBJECT_DIR = CMakeFiles/STB_IMAGE.dir
+  OBJECT_FILE_DIR = CMakeFiles/STB_IMAGE.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target STB_IMAGE
+
+
+#############################################
+# Link the static library libSTB_IMAGE.a
+
+build libSTB_IMAGE.a: CXX_STATIC_LIBRARY_LINKER__STB_IMAGE_Debug CMakeFiles/STB_IMAGE.dir/src/stb_image.cpp.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+  LANGUAGE_COMPILE_FLAGS = -std=c++17 -g
+  OBJECT_DIR = CMakeFiles/STB_IMAGE.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = libSTB_IMAGE.a
+  TARGET_PDB = STB_IMAGE.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target GLAD
+
+
+#############################################
+# Order-only phony target for GLAD
+
+build cmake_object_order_depends_target_GLAD: phony || CMakeFiles/GLAD.dir
+
+build CMakeFiles/GLAD.dir/src/glad.c.o: C_COMPILER__GLAD_Debug /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/src/glad.c || cmake_object_order_depends_target_GLAD
+  DEP_FILE = CMakeFiles/GLAD.dir/src/glad.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
+  INCLUDES = -I/System/Library/Frameworks -I/Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake-build-debug/configuration -I/Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/includes
+  OBJECT_DIR = CMakeFiles/GLAD.dir
+  OBJECT_FILE_DIR = CMakeFiles/GLAD.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target GLAD
+
+
+#############################################
+# Link the static library libGLAD.a
+
+build libGLAD.a: C_STATIC_LIBRARY_LINKER__GLAD_Debug CMakeFiles/GLAD.dir/src/glad.c.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = CMakeFiles/GLAD.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = libGLAD.a
+  TARGET_PDB = GLAD.a.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target homework3
+
+
+#############################################
+# Order-only phony target for homework3
+
+build cmake_object_order_depends_target_homework3: phony || cmake_object_order_depends_target_GLAD cmake_object_order_depends_target_STB_IMAGE
+
+build CMakeFiles/homework3.dir/src/homework3/main.cpp.o: CXX_COMPILER__homework3_Debug /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/src/homework3/main.cpp || cmake_object_order_depends_target_homework3
+  DEP_FILE = CMakeFiles/homework3.dir/src/homework3/main.cpp.o.d
+  FLAGS = -std=c++17 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/System/Library/Frameworks -I/Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake-build-debug/configuration -I/Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/includes
+  OBJECT_DIR = CMakeFiles/homework3.dir
+  OBJECT_FILE_DIR = CMakeFiles/homework3.dir/src/homework3
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target homework3
+
+
+#############################################
+# Link the executable /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/bin/homework3/homework3
+
+build /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/bin/homework3/homework3: CXX_EXECUTABLE_LINKER__homework3_Debug CMakeFiles/homework3.dir/src/homework3/main.cpp.o | /opt/homebrew/lib/libglfw.dylib /opt/homebrew/lib/libassimp.dylib /opt/homebrew/lib/libfreetype.dylib libSTB_IMAGE.a libGLAD.a || libGLAD.a libSTB_IMAGE.a
+  FLAGS = -std=c++17 -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
+  LINK_LIBRARIES = -Wl,-rpath,/Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/lib  -Xlinker -framework -Xlinker Cocoa  -Xlinker -framework -Xlinker IOKit  -Xlinker -framework -Xlinker OpenGL  -Xlinker -framework -Xlinker CoreVideo  /opt/homebrew/lib/libglfw.dylib  /opt/homebrew/lib/libassimp.dylib  /opt/homebrew/lib/libfreetype.dylib  libSTB_IMAGE.a  libGLAD.a
+  LINK_PATH = -L/Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/lib
+  OBJECT_DIR = CMakeFiles/homework3.dir
+  POST_BUILD = cd /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake-build-debug && /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/bin/cmake -E create_symlink /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/src/homework3//cursor.fs /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/bin/homework3/cursor.fs && cd /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake-build-debug && /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/bin/cmake -E create_symlink /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/src/homework3//cursor.vs /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/bin/homework3/cursor.vs && cd /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake-build-debug && /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/bin/cmake -E create_symlink /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/src/homework3//light.fs /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/bin/homework3/light.fs && cd /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake-build-debug && /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/bin/cmake -E create_symlink /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/src/homework3//light.vs /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/bin/homework3/light.vs && cd /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake-build-debug && /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/bin/cmake -E create_symlink /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/src/homework3//point_shadows.fs /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/bin/homework3/point_shadows.fs && cd /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake-build-debug && /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/bin/cmake -E create_symlink /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/src/homework3//point_shadows.vs /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/bin/homework3/point_shadows.vs && cd /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake-build-debug && /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/bin/cmake -E create_symlink /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/src/homework3//point_shadows_depth.fs /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/bin/homework3/point_shadows_depth.fs && cd /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake-build-debug && /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/bin/cmake -E create_symlink /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/src/homework3//point_shadows_depth.gs /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/bin/homework3/point_shadows_depth.gs && cd /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake-build-debug && /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/bin/cmake -E create_symlink /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/src/homework3//point_shadows_depth.vs /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/bin/homework3/point_shadows_depth.vs
+  PRE_LINK = :
+  TARGET_FILE = /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/bin/homework3/homework3
+  TARGET_PDB = homework3.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake-build-debug && /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake-build-debug && /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3 -B/Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Target aliases.
+
+build GLAD: phony libGLAD.a
+
+build STB_IMAGE: phony libSTB_IMAGE.a
+
+build homework3: phony /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/bin/homework3/homework3
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake-build-debug
+
+build all: phony libSTB_IMAGE.a libGLAD.a /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/bin/homework3/homework3
+
+# =============================================================================
+# Unknown Build Time Dependencies.
+# Tell Ninja that they may appear as side effects of build rules
+# otherwise ordered by order-only dependencies.
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCInformation.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindFreetype.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageMessage.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/SelectLibraryConfigurations.cmake /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/CMakeLists.txt /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake/modules/FindASSIMP.cmake /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake/modules/FindGLFW3.cmake /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake/modules/FindGLM.cmake /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/configuration/root_directory.h.in CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCInformation.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindFreetype.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageMessage.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/SelectLibraryConfigurations.cmake /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/CMakeLists.txt /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake/modules/FindASSIMP.cmake /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake/modules/FindGLFW3.cmake /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake/modules/FindGLM.cmake /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/configuration/root_directory.h.in CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all

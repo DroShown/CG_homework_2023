@@ -1,0 +1,10 @@
+/Applications/JetBrains/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/JetBrains/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3 -B /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake-build-debug
+-- GLM_INCLUDE_DIR = /opt/homebrew/include
+-- GLM included at /opt/homebrew/include
+-- Found GLFW3 in /opt/homebrew/include
+-- Found ASSIMP: /opt/homebrew/lib/libassimp.dylib
+-- Found ASSIMP in /opt/homebrew/include
+-- Found Freetype in /Library/Frameworks/Mono.framework/Headers;/opt/homebrew/include/freetype2
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/xuzhuoxiong/Desktop/计算机图形学/CG大作业/HW3/cmake-build-debug

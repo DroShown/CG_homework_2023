@@ -1,6 +1,7 @@
 # CG_homework_2023
 My implementation of 2023 SJTU Computer Graphics homework.
 ## 关于计算机图形学作业
+计算机图形学有三个作业，相关图形学API都是OpenGL，作业难度依次递增，具体细节在报告中有详述。
 ### 构建方法
 在./homework_project文件夹中用Cmakelist构建项目，target homework*就是对应作业的target
 ### 作业1
